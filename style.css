@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: roboto;
+}
+
+div{
+    border: 1px solid red;
+}
+
+li{
+    list-style: none;
+    border:1px solid green
+}
+
+.brand-logo{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    background-color: lightblue; /* Adjust background color to match your design */
+    color: white; /* This style will be inherited by the text "Dashboard" */
+    font-size: 1.5rem; /* Apply font size directly if there's no need for a separate span */
+    font-weight: bold; /* Apply font weight directly if there's no need for a separate span */
+}
+.icon.logo{
+    border: 2px solid salmon;
+    height: 24px; /* Adjust size to match your design */
+    width: 24px; /* Adjust size to match your design */
+    margin-right: 8px; /* Space between icon and text */
+    fill: currentColor; /* Icon color will be the same as the text color */
+}
+li.nav-bar{
+    display: flex;
+    align-items: center;
+    
+}
+.icon{
+    border: 1px solid blue;
+    height: 20px; /* Set the size of your icon */
+    width: 20px; /* Set the size of your icon */
+    margin-right: 8px; /* Add some space between the icon and the text */
+    margin-bottom: 0px;
+    fill: white; /* This sets the color of your SVG icon */
+}
+.main-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    "sidebar-container header-container"
+    "sidebar-container content-container"
+    ;
+}
+
+.header-container{
+    grid-area: header-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "header-top header-top"
+    "header-bottom-left header-bottom-right"
+}
+
+.header-top{
+    grid-area: header-top;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+}
+
+.header-bottom-left{
+    grid-area: header-bottom-left;
+    display: grid;
+    grid-template-columns: 100px auto ;
+}
+
+.header-bottom-right{
+    grid-area: header-bottom-right;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: end;
+}
+.sidebar-container{
+    
+    grid-area: sidebar-container;
+    display: grid;
+    align-content:start;
+    gap: 20px;
+}
+
+.content-container{
+    grid-area: content-container;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "project announcement"
+    "project trending"
+    ;
+}
+.project{
+    grid-area: project;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    
+    gap: 5px;
+    
+}
+.title{
+    font-size: 20px;
+}
+.content-card {
+    
+    background-color: lightblue;
+}
+.announcements{
+    grid-area: announcement;
+}
+
+.trending{
+    grid-area: trending;
+}
+
